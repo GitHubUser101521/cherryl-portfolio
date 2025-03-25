@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Roboto", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 1536px;
+  @apply mx-auto;
+}
+
+/* COLORS */
+
+.bg-dark-blue {
+  background-color: #02172c;
+}
+
+.bg-pink {
+  background-color: #e4003a;
+}
+
+.bg-yellow {
+  background-color: #ffb200;
+}
+
+.gradient-yp {
+  background-image: linear-gradient(to right, #e4003a, #ffcc54);
+}
+
+.text-gradient-yp {
+  background-image: linear-gradient(to right, #e4003a, #ffcc54);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* CLASS */
+
+.title {
+  @apply text-6xl font-bold mb-2;
+}
+
+.scroll-down {
+  @apply absolute bottom-12 flex justify-center w-full;
+}
+
+.landing-container {
+  @apply h-screen p-40 overflow-hidden;
+  max-width: 1536px;
+}
