@@ -1,3 +1,5 @@
-import LandingPage from './LandingPage'
+import Home from './Home'
+import About from './ABout'
+import Overlay from './Header'
 
-export { LandingPage }
+export { Home, About, Overlay }

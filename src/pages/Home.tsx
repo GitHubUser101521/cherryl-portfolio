@@ -41,7 +41,7 @@ function LandingPage() {
 
     return (
         <>
-            <div className="landing-container">
+            <div id="home" className="landing-container">
                 <div className=" w-1/2 flex flex-col justify-between h-full">
                     <div>
                         <h1 className="title slide-down">Greetings,</h1>
@@ -82,9 +82,11 @@ function LandingPage() {
             </div>
 
             <div className='scroll-down'>
-                <button className='bg-yellow rounded-full'>
-                    <img src="/down-arrow.png" className='w-12'/>
-                </button>
+                <a href="#about">
+                    <button className='bg-yellow rounded-full'>
+                        <img src="/down-arrow.png" className='w-12'/>
+                    </button>
+                </a>
             </div>
         </>
     )

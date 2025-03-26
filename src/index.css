@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root {
+* {
   font-family: "Roboto", system-ui, Avenir, Helvetica, Arial, sans-serif;
   box-sizing: border-box;
 }
@@ -9,6 +9,10 @@ html,
 body {
   max-width: 1536px;
   @apply mx-auto;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* COLORS */
@@ -20,6 +24,9 @@ body {
 .bg-pink {
   background-color: #e4003a;
 }
+.color-pink {
+  color: #e4003a;
+}
 
 .bg-yellow {
   background-color: #ffb200;
@@ -27,6 +34,10 @@ body {
 
 .gradient-yp {
   background-image: linear-gradient(to right, #e4003a, #ffcc54);
+}
+
+.gradient-py {
+  background-image: linear-gradient(to left, #ef5244 45%, #ffcc54);
 }
 
 .text-gradient-yp {
@@ -49,4 +60,33 @@ body {
 .landing-container {
   @apply h-screen p-40 overflow-hidden;
   max-width: 1536px;
+}
+
+.navigation-bar {
+  @apply h-full w-1/4 rounded-lg flex flex-col gap-4 py-4;
+}
+
+.showcase {
+  @apply bg-white w-full h-full rounded-lg;
+  box-shadow: inset 2px 2px 5px rgba(255, 113, 30, 0.2);
+  border-color: #ffcc54;
+}
+
+.header {
+  @apply w-full p-4 px-40 bg-white fixed top-0 flex justify-between items-center z-50;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2); /* 5px right, 5px down, 10px blur, gray color */
+}
+
+.pop-btn {
+  background-color: #fcfcfc;
+  width: 100%;
+  box-shadow: 2px 2px 2px #f9f9f9, inset -2px -2px 2px #00000026;
+  @apply border-none rounded-lg py-4;
+}
+
+.active-btn {
+  background-color: #f3f3f3; /* A slightly darker shade */
+  color: black;
+  box-shadow: inset 2px 2px 5px #a8a8a8,
+    /* Inner shadow for pressed effect */ inset -2px -2px 5px #ffffff;
 }

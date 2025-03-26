@@ -21,8 +21,6 @@ type to = {
     duration: number,
     ease: string,
     opacity: number,
-    scrub: boolean
-
 }
 
 type from = {
@@ -36,7 +34,7 @@ type SlideDirection = 'right' | 'left' | 'up' | 'down'
 
 export function animateSlideIn(target: any, direction: SlideDirection) {
     let from: from = { opacity: 0.5, stagger: 0.1 }
-    let to: to = { x: 0, y: 0, duration: 1.5, ease: "power3.out", opacity: 1, scrub: false }
+    let to: to = { x: 0, y: 0, duration: 1.5, ease: "power3.out", opacity: 1 }
 
     switch (direction) {
         case 'left':

@@ -1,7 +1,10 @@
 import { useEffect } from "react"
-import { LandingPage } from "./pages/Pages"
+import { Home, About, Overlay } from "./pages/Pages"
 import { animateSlideIn } from "./utils/gsapFunctions"
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
+
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
     useEffect(() => {
@@ -29,9 +32,14 @@ function App() {
             }
         )
     }, [])
+    
     return (
         <div className="container">
-            <LandingPage />
+            <Overlay />
+            {/* .landing-container */}
+            <Home /> 
+            {/* .main-page */}
+            <About />
         </div>
     )
 }
