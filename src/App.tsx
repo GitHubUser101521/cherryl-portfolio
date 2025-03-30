@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { Home, Experience, Overlay, Contact, Projects } from "./pages/Pages"
-import { animateSlideIn, animateScrollTrigger } from "./utils/gsapFunctions"
+import { animateScrollTrigger } from "./utils/gsapFunctions"
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
 
