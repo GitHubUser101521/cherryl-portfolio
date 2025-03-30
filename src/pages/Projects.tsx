@@ -40,7 +40,7 @@ function Projects() {
             id: 4,
             title: "Advice Generator",
             description: "With a simple click, you can get timeless advice! (Frontend Mentor)",
-            imgUrl: "public/projects/advice-generator.png",
+            imgUrl: "/projects/advice-generator.png",
             gitUrl: "https://github.com/GitHubUser101521/advice-generator",
             webUrl: "https://advice-generator-cherrylcallistacs-projects.vercel.app/"
         }
