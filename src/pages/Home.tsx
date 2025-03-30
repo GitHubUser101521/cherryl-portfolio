@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { animateTyping } from '../utils/gsapFunctions'
 import gsap from 'gsap'
+import Socials from '../components/Socials'
 
 function LandingPage() {
     useEffect(() => {
@@ -18,7 +19,7 @@ function LandingPage() {
 
         animateTyping(
             '.animateType2',
-            'Mencari kesempatan untuk mengasah keterampilan dan menerapkan pengetahuan RPL dalam proyek nyata.',
+            'Sedang menjalani edukasi SMK jurusan RPL. Seorang bilingual, Bahasa dan English, dan sedang memperlajari Mandarin sebagai bahasa ketiga. Mencari kesempatan untuk mengasah keterampilan dan menerapkan pengetahuan RPL dalam proyek nyata.',
             2
         )
 
@@ -47,25 +48,20 @@ function LandingPage() {
                         <h1 className="title slide-down">Greetings,</h1>
                         <h1 className="title slide-up">I'm <span className="text-gradient-yp"></span></h1>
 
-                        <p className="mt-8 w-3/4 text-lg animateType2">
+                        <p className="mt-8 w-3/4 text-md animateType2">
                             
                         </p>
                     </div>
 
-                    <div>
-                        <button className="bg-pink flex items-center gap-2 text-white text-lg font-bold px-4 py-2 rounded-lg slide-down">
+                    <div className='flex flex-col gap-8'>
+                        <button style={{ cursor: "not-allowed" }}className="bg-pink flex items-center gap-2 text-white text-lg font-bold px-4 py-2 rounded-lg slide-down w-fit">
                             Download CV
                             <div>
                                 <img src="/down-arrow.png" className="w-4" />
                             </div>
                         </button>
                         
-                        <div className="flex items-center gap-4 mt-8">
-                            <a href="https://github.com/GitHubUser101521" target='_blank'>
-                                <img src="/github-logo.png" alt="Github" className="w-12 rounded-full contact-icon"/>
-                            </a>
-                            <img src="/gmail-logo.png" alt="Gmail" className="w-12 rounded-full border-2 border-gray-200 contact-icon"/>
-                        </div>
+                        <Socials />
                     </div>
                 </div>
                 

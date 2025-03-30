@@ -58,3 +58,17 @@ export function animateSlideIn(target: any, direction: SlideDirection) {
 
     return () => gsap.killTweensOf(target)
 }
+
+export function animateScrollTrigger(target: any, direction: SlideDirection) {
+    ScrollTrigger.create({
+        trigger: target,
+        start: "top bottom", 
+        end: "bottom top", 
+        onEnter: () => {
+            animateSlideIn(target, direction)
+        },
+        toggleActions: "play complete restart restart",
+    })
+
+    return () => gsap.killTweensOf(target)
+}

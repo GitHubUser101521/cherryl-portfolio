@@ -1,12 +1,15 @@
 @import "tailwindcss";
 
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/navigation";
+
 * {
   font-family: "Roboto", system-ui, Avenir, Helvetica, Arial, sans-serif;
   box-sizing: border-box;
 }
 
-html,
-body {
+.container {
   max-width: 1536px;
   @apply mx-auto;
 }
@@ -47,6 +50,36 @@ button {
   color: transparent;
 }
 
+/* SWIPER */
+
+.swiper-pagination-bullet {
+  background-image: linear-gradient(to left, #ef5244 45%, #ffcc54);
+}
+
+.swiper-pagination {
+  @apply relative;
+}
+
+.swiper-button-next {
+  color: #e4003a;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.swiper-button-prev {
+  color: #e4003a;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  cursor: pointer;
+  z-index: 10000;
+}
+
 /* CLASS */
 
 .title {
@@ -74,7 +107,7 @@ button {
 
 .header {
   @apply w-full p-4 px-40 bg-white fixed top-0 flex justify-between items-center z-50;
-  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2); /* 5px right, 5px down, 10px blur, gray color */
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2); /* 5px right, 5px down, 10px blur, gray */
 }
 
 .pop-btn {
@@ -89,4 +122,8 @@ button {
   color: black;
   box-shadow: inset 2px 2px 5px #a8a8a8,
     /* Inner shadow for pressed effect */ inset -2px -2px 5px #ffffff;
+}
+
+.education {
+  @apply w-fit p-4 flex flex-col border-l-4 border-amber-400 pl-4 py-2;
 }

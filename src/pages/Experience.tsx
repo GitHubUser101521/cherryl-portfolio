@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { EducationHistory, Skillset } from '../components/Components'
+import { EducationHistory, Skillset, Certificates } from '../components/Components'
 
 function About() {
     const [ activeBtn, setActiveBtn ] = useState(1)
@@ -13,6 +13,8 @@ function About() {
             return <Skillset />
         } else if (active === 2) {
             return <EducationHistory />
+        } else if (active === 3) {
+            return <Certificates />
         } else {
             return <div className="w-full h-full flex items-center justify-center">
                 Page not found
@@ -21,7 +23,7 @@ function About() {
      }
 
     return (
-        <div id="about" className='gradient-py h-screen main-page px-40 py-20 pt-30 flex gap-4'>
+        <div id="about" className='gradient-py h-screen px-40 py-20 pt-30 flex gap-4'>
             <div className="navigation-bar">
                 <button
                     className={`pop-btn ${activeBtn === 1 ? 'italic active-btn' : ''}`}
@@ -35,6 +37,13 @@ function About() {
                     onClick={() => handleButtonClick(2)}
                 >
                     History of Education
+                </button>
+
+                <button
+                    className={`pop-btn ${activeBtn === 3 ? 'italic active-btn' : ''}`}
+                    onClick={() => handleButtonClick(3)}
+                >
+                    Experience
                 </button>
             </div>
 
