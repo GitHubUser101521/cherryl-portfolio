@@ -1,5 +1,6 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Navigation } from 'swiper/modules'
+import { useEffect, useState } from 'react'
 
 type project = {
     id: number,
@@ -45,14 +46,23 @@ function Projects() {
             webUrl: "https://advice-generator-cherrylcallistacs-projects.vercel.app/"
         }
     ]
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth)
+
+        window.addEventListener('resize', handleResize)
+
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
 
     return (
-        <div className='h-screen px-40 py-20 flex flex-col justify-around w-full'>
+        <div id='projects' className='h-screen px-40 py-20 flex flex-col justify-center gap-20 sm:justify-around w-full container-padding'>
             <h1 className='text-center title slide-up'>Projects</h1>
-
+            
             <div>
                 <Swiper
-                    slidesPerView={3} 
+                    slidesPerView={windowWidth < 768 ? 1 : 3} 
                     spaceBetween={30} 
                     loop={true} 
                     pagination={{
@@ -60,19 +70,20 @@ function Projects() {
                     }}
                     navigation={true}
                     modules={[Pagination, Navigation]}
-                    className="flex items-center w-full"
+                    className="sm:flex"
                 >
                 {
                     projects.map(p => (
                         <SwiperSlide key={p.id}>
                             <div className='flex flex-col gap-4'>
                                 <div className='border border-gray'>
-                                    <img src={p.imgUrl} alt={p.title} />
+                                    <a href={p.webUrl} target='_blank'>
+                                        <img src={p.imgUrl} alt={p.title} />
+                                    </a>
                                 </div>
                                 
                                 <div className='flex items-center justify-between px-4'>
                                     <h2 className='font-bold text-2xl'>{ p.title }</h2>
-
                                     <div className='flex gap-4'>
                                         <a href={p.webUrl}>
                                             <img src="/link.png" alt="See Website" className='w-6 aspect-square'/>
@@ -82,7 +93,6 @@ function Projects() {
                                         </a>
                                     </div>
                                 </div>
-
                                 <p className='text-center px-8 break-words'>{ p.description }</p>
                             </div>
                         </SwiperSlide>
@@ -91,7 +101,7 @@ function Projects() {
                 </Swiper>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Projects;
+export default Projects

@@ -1,12 +1,12 @@
 import { useEffect } from "react"
 import gsap from 'gsap'
 
-function Skillset() {
-    const skills = ['html', 'css', 'express', 'github', 'zustand']
+type Skillset = {
+    capitalize: (str: string) => string
+}
 
-    const capitalize = (str: string) => {
-        return str.slice(0, 1).toLocaleUpperCase() + str.slice(1, str.length)
-    }
+function Skillset({ capitalize }: Skillset) {
+    const skills = ['html', 'css', 'express', 'github', 'zustand']
 
     useEffect(() => {
         gsap.to('.react',
@@ -63,7 +63,7 @@ function Skillset() {
             <div className="flex gap-4 flex-wrap justify-between">
             {
                 skills.map(s => (
-                    <div className="w-1/9 text-center animate">
+                    <div className="w-1/9 text-center animate" key={s}>
                         <img src={`/skillset/${s}.png`} alt={capitalize(s)} />
                         <p>{capitalize(s)}</p>
                     </div>

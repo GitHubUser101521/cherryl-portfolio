@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 .container {
   max-width: 1536px;
   @apply mx-auto;
@@ -82,31 +87,29 @@ button {
 
 /* CLASS */
 
+.container-padding {
+  @apply pt-20 p-10 md:p-20 lg:p-40 overflow-hidden lg:h-screen;
+}
+
 .title {
-  @apply text-6xl font-bold mb-2;
+  @apply text-4xl font-bold mb-2 lg:text-6xl;
 }
 
 .scroll-down {
-  @apply absolute bottom-12 flex justify-center w-full;
+  @apply absolute bottom-0 lg:bottom-8 flex justify-center w-full;
 }
-
-.landing-container {
-  @apply h-screen p-40 overflow-hidden;
-  max-width: 1536px;
-}
-
 .navigation-bar {
-  @apply h-full w-1/4 rounded-lg flex flex-col gap-4 py-4;
+  @apply h-full rounded-lg flex gap-4 py-4 md:flex-row lg:flex-col md:w-full lg:w-1/4;
 }
 
 .showcase {
-  @apply bg-white w-full h-full rounded-lg;
+  @apply bg-white w-full h-screen rounded-lg md:h-full;
   box-shadow: inset 2px 2px 5px rgba(255, 113, 30, 0.2);
   border-color: #ffcc54;
 }
 
 .header {
-  @apply w-full p-4 px-40 bg-white fixed top-0 flex justify-between items-center z-50;
+  @apply w-full p-4 px-10 md:px-20 lg:px-40 bg-white fixed top-0 flex justify-between items-center z-50;
   box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2); /* 5px right, 5px down, 10px blur, gray */
 }
 
@@ -118,6 +121,7 @@ button {
 }
 
 .active-btn {
+  @apply border-none rounded-lg py-4;
   background-color: #f3f3f3; /* A slightly darker shade */
   color: black;
   box-shadow: inset 2px 2px 5px #a8a8a8,

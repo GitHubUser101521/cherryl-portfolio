@@ -39,13 +39,13 @@ function App() {
     }, [])
     
     return (
-        <div className="container">
+        <>
             <Overlay />
             <Home /> 
             <Experience />
             <Projects />
             <Contact />
-        </div>
+        </>
     )
 }
 

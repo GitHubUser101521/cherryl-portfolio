@@ -3,9 +3,10 @@ import Socials from "../components/Socials"
 function Contact() {
     const phoneNum = "(+62) 813 1777 9538"
     const email = "cherrylcallistacheniago@gmail.com"
+
     return (
-        <div id="contact" className="h-screen w-full flex justify-center items-center p-40 bg-red gradient-yp gap-4">
-            <div className="flex gap-16 bg-white p-12 rounded-lg">
+        <div id="contact" className="h-screen w-full flex justify-center items-center gradient-yp gap-4 container-padding">
+            <div className="flex flex-col lg:flex-row gap-16 bg-white p-12 rounded-lg items-center">
                 <div className="border-2 border-black aspect-square w-60">
                 </div>
 

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { EducationHistory, Skillset, Certificates } from '../components/Components'
+import MobileExperience from "./MobileExperience";
 
 function About() {
     const [ activeBtn, setActiveBtn ] = useState(1)
@@ -8,9 +9,13 @@ function About() {
         setActiveBtn(buttonIndex);
     };
 
+    const capitalize = (str: string) => {
+        return str.slice(0, 1).toLocaleUpperCase() + str.slice(1, str.length)
+    }
+
     const renderShowcase = (active: number) => {
         if (active === 1) {
-            return <Skillset />
+            return <Skillset capitalize={capitalize}/>
         } else if (active === 2) {
             return <EducationHistory />
         } else if (active === 3) {
@@ -23,32 +28,38 @@ function About() {
      }
 
     return (
-        <div id="about" className='gradient-py h-screen px-40 py-20 pt-30 flex gap-4'>
-            <div className="navigation-bar">
-                <button
-                    className={`pop-btn ${activeBtn === 1 ? 'italic active-btn' : ''}`}
-                    onClick={() => handleButtonClick(1)}
-                >
-                    Skillset
-                </button>
+        <div id="about" className='gradient-py w-full lg:h-screen flex gap-4 pt-20 p-10 md:p-20 lg:p-40'>
+            <div className="hidden md:flex md:flex-col lg:flex-row gap-4 h-full w-full">
+                <div className="navigation-bar">
+                    <button
+                        className={`pop-btn ${activeBtn === 1 ? 'italic active-btn' : ''}`}
+                        onClick={() => handleButtonClick(1)}
+                    >
+                        Skillset
+                    </button>
 
-                <button
-                    className={`pop-btn ${activeBtn === 2 ? 'italic active-btn' : ''}`}
-                    onClick={() => handleButtonClick(2)}
-                >
-                    History of Education
-                </button>
+                    <button
+                        className={`pop-btn ${activeBtn === 2 ? 'italic active-btn' : ''}`}
+                        onClick={() => handleButtonClick(2)}
+                    >
+                        History of Education
+                    </button>
 
-                <button
-                    className={`pop-btn ${activeBtn === 3 ? 'italic active-btn' : ''}`}
-                    onClick={() => handleButtonClick(3)}
-                >
-                    Experience
-                </button>
+                    <button
+                        className={`pop-btn ${activeBtn === 3 ? 'italic active-btn' : ''}`}
+                        onClick={() => handleButtonClick(3)}
+                    >
+                        Experience
+                    </button>
+                </div>
+
+                <div className="showcase">
+                    {renderShowcase(activeBtn)}
+                </div>
             </div>
 
-            <div className="showcase">
-                {renderShowcase(activeBtn)}
+            <div className="md:hidden">
+                <MobileExperience capitalize={capitalize}/>
             </div>
         </div>
     )

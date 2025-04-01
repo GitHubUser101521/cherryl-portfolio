@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { animateTyping } from '../utils/gsapFunctions'
 import gsap from 'gsap'
 import Socials from '../components/Socials'
-
+// md:w-1/2 flex flex-row-reverse gap-8 md:justify-between md:flex-col h-full
 function LandingPage() {
     useEffect(() => {
         animateTyping(
@@ -19,7 +19,7 @@ function LandingPage() {
 
         animateTyping(
             '.animateType2',
-            'Sedang menjalani edukasi SMK jurusan RPL. Seorang bilingual, Bahasa dan English, dan sedang memperlajari Mandarin sebagai bahasa ketiga. Mencari kesempatan untuk mengasah keterampilan dan menerapkan pengetahuan RPL dalam proyek nyata.',
+            'Sedang menjalani edukasi SMK jurusan RPL. Seorang bilingual, Bahasa dan English, dan sedang mempelajari Mandarin sebagai bahasa ketiga. Mencari kesempatan untuk mengasah keterampilan dan menerapkan pengetahuan RPL dalam proyek nyata.',
             2
         )
 
@@ -42,37 +42,32 @@ function LandingPage() {
 
     return (
         <>
-            <div id="home" className="landing-container">
-                <div className=" w-1/2 flex flex-col justify-between h-full">
-                    <div>
-                        <h1 className="title slide-down">Greetings,</h1>
-                        <h1 className="title slide-up">I'm <span className="text-gradient-yp"></span></h1>
+            <div id="home" className="container-padding h-screen flex flex-col justify-center">
+                <div className="flex flex-col lg:flex-row gap-12 justify-center items-center">
+                    <div className='gradient-py border-2 border-black rounded-full aspect-square w-2/3 lg:max-w-1/3'>
+                        <img src="/placeholder.png" alt="Me" className='aspect-square rounded-full'/>
+                    </div>
 
-                        <p className="mt-8 w-3/4 text-md animateType2">
+                    <div className='flex-gap-12'>
+                        <div>
+                            <h1 className="title slide-down hidden sm:flex">Greetings,</h1>
+                            <h1 className="title slide-up">I'm <span className="text-gradient-yp"></span></h1>
+
+                            <p className="my-8 text-md animateType2">
+                                
+                            </p>
+                        </div>
+
+                        <div className='flex flex-col gap-8'>
+                            <button style={{ cursor: "not-allowed" }}className="bg-pink flex items-center gap-2 text-white text-lg font-bold px-4 py-2 rounded-lg slide-down w-fit">
+                                Download CV
+                                <div>
+                                    <img src="/down-arrow.png" className="w-4" />
+                                </div>
+                            </button>
                             
-                        </p>
-                    </div>
-
-                    <div className='flex flex-col gap-8'>
-                        <button style={{ cursor: "not-allowed" }}className="bg-pink flex items-center gap-2 text-white text-lg font-bold px-4 py-2 rounded-lg slide-down w-fit">
-                            Download CV
-                            <div>
-                                <img src="/down-arrow.png" className="w-4" />
-                            </div>
-                        </button>
-                        
-                        <Socials />
-                    </div>
-                </div>
-                
-                {/* <div className="gradient-yp -rotate-80 w-screen h-screen -translate-y-1/2 translate-x-1/6 overflow-hidden">sd</div> */}
-                <div className='absolute -z-10 top-0 right-0'>
-                    <img src="/landing-bg.png" />
-                </div>
-                <div className='absolute bottom-1/4 right-20 w-1/3 flex justify-center'>
-                    <img src="/placeholder.png" className='slide-down w-2/3'/>
-                    <div className='bg-yellow absolute bottom-0 rounded-lg'>
-                        <p className='text-white font-bold px-4 py-2 text-lg animateType1'></p>
+                            <Socials />
+                        </div>
                     </div>
                 </div>
             </div>
