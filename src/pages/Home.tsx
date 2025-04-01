@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { animateTyping } from '../utils/gsapFunctions'
 import gsap from 'gsap'
 import Socials from '../components/Socials'
-// md:w-1/2 flex flex-row-reverse gap-8 md:justify-between md:flex-col h-full
+
 function LandingPage() {
     useEffect(() => {
         animateTyping(
@@ -42,7 +42,7 @@ function LandingPage() {
 
     return (
         <>
-            <div id="home" className="container-padding h-screen flex flex-col justify-center">
+            <div id="home" className="container-padding h-screen flex flex-col justify-center py-20">
                 <div className="flex flex-col lg:flex-row gap-12 justify-center items-center">
                     <div className='gradient-py border-2 border-black rounded-full aspect-square w-2/3 lg:max-w-1/3'>
                         <img src="/placeholder.png" alt="Me" className='aspect-square rounded-full'/>
