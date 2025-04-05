@@ -88,7 +88,7 @@ button {
 /* CLASS */
 
 .container-padding {
-  @apply pt-20 p-10 md:p-20 lg:p-40 overflow-hidden lg:h-screen;
+  @apply pt-20 p-8 md:p-20 lg:p-40 overflow-hidden lg:h-screen;
 }
 
 .title {

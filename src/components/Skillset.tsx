@@ -6,7 +6,7 @@ type Skillset = {
 }
 
 function Skillset({ capitalize }: Skillset) {
-    const skills = ['html', 'css', 'express', 'github', 'zustand']
+    const skills = ['html', 'css', 'express', 'github', 'zustand', 'gsap']
 
     useEffect(() => {
         gsap.to('.react',

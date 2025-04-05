@@ -53,7 +53,7 @@ function LandingPage() {
                             <h1 className="title slide-down hidden sm:flex">Greetings,</h1>
                             <h1 className="title slide-up">I'm <span className="text-gradient-yp"></span></h1>
 
-                            <p className="my-8 text-md animateType2">
+                            <p className="text-sm my-8 md:text-lg animateType2">
                                 
                             </p>
                         </div>
@@ -75,7 +75,7 @@ function LandingPage() {
             <div className='scroll-down'>
                 <a href="#about">
                     <button className='bg-yellow rounded-full'>
-                        <img src="/down-arrow.png" className='w-12'/>
+                        <img src="/down-arrow.png" className='w-8 md:w-12'/>
                     </button>
                 </a>
             </div>
