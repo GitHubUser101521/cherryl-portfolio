@@ -49,7 +49,16 @@ function Projects() {
             gitUrl: "https://github.com/GitHubUser101521/advice-generator",
             webUrl: "https://advice-generator-cherrylcallistacs-projects.vercel.app/",
             tech: ['react', 'axios', 'tailwind']
-        }
+        },
+        {
+            id: 5,
+            title: "Website OSIS Tri Ratna",
+            description: "UI from Figma",
+            imgUrl: "/projects/portfolio-osis-smk-triratna.png",
+            gitUrl: "https://github.com/GitHubUser101521/portfolio-OSIS",
+            webUrl: "https://osis-smk-triratna.vercel.app/",
+            tech: ['react', 'gsap', 'tailwind']
+        },
     ]
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
@@ -63,25 +72,31 @@ function Projects() {
     }, [])
 
     return (
-        <div id='projects' className='h-screen flex flex-col justify-center gap-20 sm:justify-around w-full container-padding'>
-            <h1 className='text-center title slide-up'>Projects</h1>
+        <div id='projects' className='h-screen flex flex-col gap-20 sm:justify-around container-padding'>
+            <div className='flex justify-around items-center'>
+                <button className='button-prev swiper-btn gradient-yp'>{`<`}</button>
+                <h1 className='text-center title slide-up'>Projects</h1>
+                <button className='button-next swiper-btn gradient-py'>{`>`}</button>
+            </div>
             
             <div>
                 <Swiper
-                    slidesPerView={windowWidth < 768 ? 1 : 3} 
+                    slidesPerView={windowWidth < 1024 ? 1 : 3} 
                     spaceBetween={30} 
                     loop={true} 
                     pagination={{
                         clickable: true,
                     }}
-                    navigation={true}
+                    navigation={{
+                        prevEl: '.button-prev',
+                        nextEl: '.button-next',
+                    }}
                     modules={[Pagination, Navigation]}
-                    className="sm:flex"
                 >
                 {
                     projects.map(p => (
                         <SwiperSlide key={p.id}>
-                            <div className='flex flex-col gap-4 mb-8'>
+                            <div className='flex flex-col gap-4 mb-12'>
                                 <div className='border border-gray'>
                                     <a href={p.webUrl} target='_blank'>
                                         <img src={p.imgUrl} alt={p.title} />

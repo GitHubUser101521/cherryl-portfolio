@@ -61,34 +61,14 @@ button {
   background-image: linear-gradient(to left, #ef5244 45%, #ffcc54);
 }
 
-.swiper-pagination {
-  @apply relative;
-}
-
-.swiper-button-next {
-  color: #e4003a;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  cursor: pointer;
-  z-index: 10000;
-}
-
-.swiper-button-prev {
-  color: #e4003a;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  cursor: pointer;
-  z-index: 10000;
+.swiper-btn {
+  @apply text-3xl w-12 aspect-square text-white font-bold rounded-full;
 }
 
 /* CLASS */
 
 .container-padding {
-  @apply pt-20 p-8 md:p-20 lg:p-40 overflow-hidden lg:h-screen;
+  @apply p-10 pt-20 lg:p-40 overflow-hidden lg:h-screen;
 }
 
 .title {
@@ -99,7 +79,7 @@ button {
   @apply absolute bottom-0 lg:bottom-8 flex justify-center w-full;
 }
 .navigation-bar {
-  @apply h-full rounded-lg flex gap-4 py-4 md:flex-row lg:flex-col md:w-full lg:w-1/4;
+  @apply h-min rounded-lg flex gap-4 py-4 md:flex-row lg:flex-col md:w-full lg:w-1/4;
 }
 
 .showcase {
