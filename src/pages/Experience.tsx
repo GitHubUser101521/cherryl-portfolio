@@ -28,7 +28,7 @@ function About() {
      }
 
     return (
-        <div id="about" className='gradient-py w-full lg:h-screen flex gap-4 pt-20 p-8 md:p-20 lg:p-40 h-screen'>
+        <div id="about" className='gradient-py w-full lg:h-screen flex gap-4 pt-20 p-8 md:p-20 lg:p-40'>
             <div className="hidden md:flex md:flex-col lg:flex-row gap-4 h-full w-full">
                 <div className="navigation-bar">
                     <button
