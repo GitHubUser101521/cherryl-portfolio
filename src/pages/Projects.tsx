@@ -25,11 +25,11 @@ function Projects() {
         },
         {
             id: 2,
-            title: "Dessert Shop",
-            description: "A challenge from Frontend Mentor",
+            title: "Dessert Shop V2",
+            description: "A challenge from Frontend Mentor (But better)",
             imgUrl: "/projects/dessert-shop.png",
-            gitUrl: "https://github.com/GitHubUser101521/dessert-shop",
-            webUrl: "https://dessert-shop-swart.vercel.app/",
+            gitUrl: "https://github.com/GitHubUser101521/dessert-shop-v2",
+            webUrl: "https://dessert-shop-v2.vercel.app/",
             tech: ['react', 'zustand', 'tailwind']
         },
         {
